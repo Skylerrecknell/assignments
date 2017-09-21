@@ -1,12 +1,18 @@
 <html>
     <head>
         <script>
-            var x = 1 + 2;
+           
+        </script>
+        
+        <script>
+                 function addItem(){
+        var li = document.createElement("LI");  
+        var input = document.getElementById("add");
+        li.innerHTML = input.value;
+        input.value = "";
 
-            function omg(){
-                alert("What is happening");
-            }
-
+        document.getElementById("faves").appendChild(li);
+    }
         </script>
 
     </head>
@@ -14,8 +20,12 @@
     <body>
 
         <h1>Title</h1>
-        <button onclick="omg();">Go</button>
-        <input id="input"> 
+        <input type="button" id="btnAdd" value="Add" onclick="addItem()">
+        <ul id="faves">
+            <li>cat</li>
+            <li>dog</li>
+
+        </ul>
 
     </body>
 </html>
